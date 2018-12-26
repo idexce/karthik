@@ -3,8 +3,7 @@ node {
 		 checkout scm
 		}
     stage('Build Image'){
-        sh 'sudo su'
-      	sh 'docker build -t idexcel-interns/karthik:${BUILD_NUMBER} .'
+      	sh 'sudo docker build -t idexcel-interns/karthik:${BUILD_NUMBER} .'
       	sh 'docker tag idexcel-interns/karthik:${BUILD_NUMBER} idexcel-interns/karthik:latest'
     }
  }
