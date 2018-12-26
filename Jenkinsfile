@@ -8,5 +8,7 @@ node {
     }
     stage('Push Image'){
         sh 'docker push idexcelinterns/karthik:latest'
+        docker.withRegistry('https://registry.hub.docker.com', 'Docker-Hub-Credentials') {
+
     }
  }
