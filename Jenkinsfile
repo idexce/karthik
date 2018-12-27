@@ -7,7 +7,6 @@ node {
       	sh 'docker tag idexcel-interns/karthik:${BUILD_NUMBER} idexcelinterns/karthik:latest'
     }
     stage('Push Image'){
-		    docker.withRegistry('https://cloud.docker.com/u/idexcelinterns/repository/docker/idexcelinterns/karthik')
         sh 'docker push idexcelinterns/karthik:latest'
     }
  }
