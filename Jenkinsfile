@@ -7,7 +7,7 @@ node {
       	sh 'docker tag idexcel-interns/karthik:${BUILD_NUMBER} idexcelinterns/karthik:latest'
     }
     stage('Push Image'){
-		    sh  sudo docker login
+		    sh docker login
         sh 'docker push idexcelinterns/karthik:latest'
     }
  }
