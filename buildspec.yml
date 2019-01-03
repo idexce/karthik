@@ -14,15 +14,15 @@
     "environmentVariables": [
       {
         "name": "AWS_DEFAULT_REGION",
-        "value": "region-ID"
+        "value": "us-west-2"
       },
       {
         "name": "AWS_ACCOUNT_ID",
-        "value": "account-ID"
+        "value": "0125-1544-9968"
       },
       {
         "name": "IMAGE_REPO_NAME",
-        "value": "Amazon-ECR-repo-name"
+        "value": "samplecodebuild"
       },
       {
         "name": "IMAGE_TAG",
