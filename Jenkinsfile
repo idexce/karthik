@@ -3,12 +3,12 @@ node {
 		 checkout scm
 		}
     stage('Build Image'){
-      	sh 'sudo docker build -t idexcel-interns/karthik:${BUILD_NUMBER} .'
-      	sh 'docker tag idexcel-interns/karthik:${BUILD_NUMBER} idexcelinterns/karthik:latest'
+      	sh 'sudo docker build -t idexce/karthik:${BUILD_NUMBER} .'
+      	sh 'docker tag idexce/karthik:${BUILD_NUMBER} idexce/karthik:latest'
     }
     stage('Push Image'){
-		    sh 'sudo docker login -u idexcelinterns -p kutty170065'
-				sh 'docker push idexcelinterns/karthik:latest'
+		    sh 'sudo docker login -u idexce -p kutty170065'
+				sh 'docker push idexce/karthik:latest'
 	 }
 	stage('update imageurl in paramater store'){
 	sh 'aws ssm put-parameter --name "parameter name" --value "a parameter value" --type String
